@@ -2,6 +2,7 @@ body {
   font-family: sans-serif;
   margin: 20px auto;
   max-width: 70%;
+  /*background-color: rgb(56, 55, 55);*/
 }
 
 fieldset {
@@ -50,4 +51,20 @@ input:required {
 
 input:optional {
   border: 2px dashed;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+.sideimage {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+.form-container {
+  flex: 1;
+  padding: 2rem;
 }
