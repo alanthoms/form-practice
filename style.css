@@ -246,3 +246,40 @@ option::checkmark {
   top: calc(anchor(bottom) + 1px);
   left: anchor(10%);
 }
+
+button,
+.submit {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1a1a2e; /* dark, subtle base */
+  border: 2px solid #444;   /* subtle outline */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* Hover */
+button:hover,
+.submit:hover {
+  background-color: #1d1d3b; /* slightly lighter dark */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transform: translateY(-1px);
+  border-color: #8d8d8d;
+  
+}
+
+/* Pressed / Active */
+button:active,
+.submit:active {
+  background-color: #14142b; /* darker shade */
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  border-color: white;
+}
