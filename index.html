@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Practice</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Practice</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/x-icon" href="tati.jpeg">
 </head>
+
 <body>
   <div class="container">
-    <div class = "sideimage">
-<img src="your-image.jpg" alt="Descriptive Alt Text" />
-      <h1>Your Title Here</h1>
+    <div class="sideimage">
+      <!--<img src="tati.jpeg" alt="Descriptive Alt Text" /> -->
+      <div class="title">
+        <h1>TATI</h1>
+      </div>
     </div>
     <div class="form-container">
-    <form>
-  <fieldset>
-    <legend>Feedback form</legend>
-    <div class ="form-section">
-      <label for="fname">First name: </label>
-      <input id="fname" name="fname" type="text" required />
+      <form>
+        <fieldset>
+          <legend>Application Form</legend>
+          <div class="form-section">
+            <label for="fname">First Name: </label>
+            <input id="fname" name="fname" type="text" required placeholder="First Name" maxlength="20" />
+          </div>
+          <div class="form-section">
+            <label for="lname">Last Name: </label>
+            <input id="lname" name="lname" type="text" required placeholder="Last Name" maxlength="20" />
+          </div>
+          <div>
+            <label for="email"> Email Address </label>
+            <input id="email" name="email" type="email" required placeholder="Email Address" />
+          </div>
+          <div>
+            <label for="password"> Password </label>
+            <input id="password" name="password" type="password" placeholder="Password" required />
+          </div>
+          <div>
+          <label for="account-type"> Account Type </label>
+          <select name="account type" id="account-type">
+            <option value="student">Student</option>
+            <option value="business">Business</option>
+            <option value="personal" selected>Personal</option>
+          </select>
+          </div>
+          <div><button>Submit</button></div>
+        </fieldset>
+      </form>
     </div>
-    <div class ="form-section">
-      <label for="lname">Last name: </label>
-      <input id="lname" name="lname" type="text" required />
-    </div>
-    <div>
-      <label for="email"> Email address (if you want a response): </label>
-      <input id="email" name="email" type="email" />
-    </div>
-    <div><button>Submit</button></div>
-  </fieldset>
-</form>
-</div>
-    
-</div>
+
+  </div>
 </body>
+
 </html>
