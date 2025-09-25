@@ -133,7 +133,7 @@ input:valid {
 }
 
 .title:hover{
-  text-shadow: 0px 0px 40 px rgb(255, 255, 255);
+  text-shadow: 0px 0px 40px rgb(255, 255, 255);
 }
 
 select,
@@ -145,4 +145,78 @@ select {
   border: 2px solid #dddddd;
   padding: 10px;
   transition: 0.4s;
+}
+
+select::picker-icon {
+  color: white;
+  transition: 0.4s rotate;
+}
+
+select:open::picker-icon {
+  rotate: 180deg;
+}
+::picker(select) {
+  border: none;
+}
+
+
+option {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  color:whitesmoke;
+  border: 2px solid #dddddd;
+  background: #090909;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+option:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+option:not(option:last-of-type) {
+  border-bottom: none;
+}
+
+option:nth-of-type(odd) {
+  background: rgb(28, 3, 52);
+}
+
+option:hover,
+option:focus {
+  transition: 0.4s;
+  color: rgb(255, 243, 195);
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+option:checked {
+  font-weight: bold;
+}
+option::checkmark {
+  order: 1;
+  margin-left: auto;
+}
+
+::picker(select) {
+  opacity: 0;
+  transition: all 0.4s allow-discrete;
+}
+
+::picker(select):popover-open {
+  opacity: 1;
+}
+
+@starting-style {
+  ::picker(select):popover-open {
+    opacity: 0;
+  }
+}
+::picker(select) {
+  top: calc(anchor(bottom) + 1px);
+  left: anchor(10%);
 }
