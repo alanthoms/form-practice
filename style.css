@@ -96,6 +96,32 @@ input:invalid {
 input:valid {
   border: 2px solid rgb(0, 0, 234)
 }
+
+
+input + span {
+  position: relative;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
+
+input:required:placeholder-shown + span::before {
+  content: "✖";
+  color: #ccc; /* neutral */
+}
+
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: rgb(0, 0, 234);
+}
 .container {
   display: flex;
   align-items: center;
