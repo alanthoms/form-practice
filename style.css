@@ -1,19 +1,65 @@
+/* General setup */
+
+.bitcount-prop-single-bit {
+  font-family: "Bitcount Prop Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+
+@font-face {
+  font-family: 'Alex Brush';
+  src: url('fonts/AlexBrush-Regular.woff2') format('woff2'),
+    url('fonts/AlexBrush-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Light.woff2') format('woff2'),
+    url('fonts/OpenSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "modern-normalize";
 
 :root {
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, figure, p, ol, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
   margin: 0;
 }
 
-ol[role="list"], ul[role="list"] {
+ol[role="list"],
+ul[role="list"] {
   list-style: none;
   padding-inline: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -29,28 +75,37 @@ body {
   background-color: rgb(255, 255, 255);
   padding: 0px;
   margin: 0px;
-  background-color: rgb(7, 1, 21);
+  background-color: rgb(29, 28, 29);
 }
 
 fieldset {
   /*padding: 10px 30px 0;*/
+
   color: white;
-  margin: auto;
   border: 0px;
+  background-color: rgb(36, 28, 33);
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  padding: 30px 150px 30px 50px;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 legend {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   text-shadow: 0px 0px 1px rgb(255, 255, 255);
+  font-family: 'Bitcount Prop Single', sans-serif;
 }
 
-fieldset > div {
-  margin-bottom: 20px;
+fieldset>div {
+  margin-bottom: 5px;
   display: flex;
   flex-flow: row wrap;
-  color:rgb(255, 227, 188); 
+  color: rgb(255, 227, 188);
 }
 
 button,
@@ -64,19 +119,22 @@ input {
 }
 
 input {
-  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
+  color:whitesmoke;
+  background-color: #2e1d30;
 }
 
 input:hover,
 input:focus {
   background-color: #eeeeee;
+  color:#14142b;
 }
 
 button {
   width: 60%;
   margin: 0 auto;
 }
+
 input:required {
   border: 2px solid;
 }
@@ -86,7 +144,8 @@ input:optional {
 }
 
 input:required:placeholder-shown {
-  border: 2px solid #ccc; /* neutral */
+  border: 2px solid #ccc;
+  /* neutral */
 }
 
 input:invalid {
@@ -94,45 +153,50 @@ input:invalid {
 }
 
 input:valid {
-  border: 2px solid rgb(0, 0, 234)
+  border: 2px solid rgb(255, 167, 230)
 }
 
 
-input + span {
+input+span {
   position: relative;
 }
 
-input + span::before {
+input+span::before {
   position: absolute;
   right: -20px;
   top: 5px;
 }
 
-input:required:placeholder-shown + span::before {
+input:required:placeholder-shown+span::before {
   content: "✖";
-  color: #ccc; /* neutral */
+  color: #ccc;
+  /* neutral */
 }
 
-input:invalid + span::before {
+input:invalid+span::before {
   content: "✖";
   color: red;
 }
 
-input:valid + span::before {
+input:valid+span::before {
   content: "✓";
-  color: rgb(0, 0, 234);
+  color: rgb(255, 167, 230)
 }
+
 .container {
   display: flex;
   align-items: center;
   min-height: 100vh;
+  width: 100%;
   padding: 0;
   margin: 0;
   border: 0px;
 
 }
+
 .sideimage {
   flex: 1;
+  flex-direction: row;
   text-align: center;
   background-image: url('tati.jpeg');
   background-size: cover;
@@ -140,26 +204,39 @@ input:valid + span::before {
   background-position: center;
 
 }
-.form-container {
-  flex: 1;  
 
-  background-color: rgb(7, 1, 21);
+.form-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title>h1 {
   position: static;
   top: 50%;
   left: auto;
   color: white;
-  font-size: 4rem;
+  font-size: 10rem;
   font-weight: bold;
-  text-shadow: 0px 0px 1px rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.3);
   transition: 0.5s;
+  font-family: "Bitcount Prop Single";
+  word-spacing: 1.6rem;
+
+  text-shadow: 0px 0px 40px rgb(255, 255, 255);
 }
 
-.title:hover{
-  text-shadow: 0px 0px 40px rgb(255, 255, 255);
+.title>h1:hover {
+
+  text-shadow: 0px 0px 1px rgb(255, 255, 255);
 }
 
 select,
@@ -181,6 +258,7 @@ select::picker-icon {
 select:open::picker-icon {
   rotate: 180deg;
 }
+
 ::picker(select) {
   border: none;
 }
@@ -190,7 +268,7 @@ option {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-  color:whitesmoke;
+  color: whitesmoke;
   border: 2px solid #dddddd;
   background: #090909;
   padding: 10px;
@@ -210,7 +288,7 @@ option:not(option:last-of-type) {
 }
 
 option:nth-of-type(odd) {
-  background: rgb(28, 3, 52);
+  background: rgb(46, 3, 52);
 }
 
 option:hover,
@@ -223,6 +301,7 @@ option:focus {
 option:checked {
   font-weight: bold;
 }
+
 option::checkmark {
   order: 1;
   margin-left: auto;
@@ -242,6 +321,7 @@ option::checkmark {
     opacity: 0;
   }
 }
+
 ::picker(select) {
   top: calc(anchor(bottom) + 1px);
   left: anchor(10%);
@@ -251,35 +331,61 @@ button,
 .submit {
   display: block;
   width: 60%;
-  margin: 0 auto;
-  padding: 12px 0;
+  margin: 20px auto 0px;
+  padding: 12px 10px;
   font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
-  background-color: #1a1a2e; /* dark, subtle base */
-  border: 2px solid #444;   /* subtle outline */
+  background-color: rgb(43, 30, 45);
+  /* dark, subtle base */
+  border: 1px solid #8d8d8d;
+  /* subtle outline */
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
+  transition: 0.4s;
 }
 
 /* Hover */
 button:hover,
 .submit:hover {
-  background-color: #1d1d3b; /* slightly lighter dark */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transform: translateY(-1px);
+  background-color: #302033;
+  /* slightly lighter dark */
+  transform: translateY(1px);
   border-color: #8d8d8d;
-  
+
 }
 
 /* Pressed / Active */
 button:active,
 .submit:active {
-  background-color: #14142b; /* darker shade */
+  background-color: #583456;
+  /* darker shade */
   transform: translateY(1px);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   border-color: white;
+}
+
+
+.logo {
+  background-image: url('odin-lined.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  /* Adjust the width as needed */
+  height: 100px;
+  /* Adjust the height as needed */
+}
+
+.subtitle {
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  padding-bottom: 0.2rem;
 }

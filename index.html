@@ -5,18 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Practice</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap"
+    rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 
-  <link rel="icon" type="image/x-icon" href="tati.jpeg">
+  <link rel="icon" type="image/x-icon" href="odin-lined.png">
 </head>
 
 <body>
   <div class="container">
     <div class="sideimage">
       <!--<img src="tati.jpeg" alt="Descriptive Alt Text" /> -->
+
       <div class="title">
+        <div class="logo"></div>
         <h1>TATI</h1>
       </div>
+      <p class="subtitle">Photo By @alanthms</p>
     </div>
     <div class="form-container">
       <form>
@@ -43,14 +52,14 @@
             <span></span>
           </div>
           <div>
-            
+
             <label for="account-type"> Account Type </label>
             <select name="account type" id="account-type">
               <option value="default" disabled>Select an option</option>
               <!--<option value = ""> Please Select</option> -->
               <option value="student">Student</option>
               <option value="business">Business</option>
-              <option value="personal" >Personal</option>
+              <option value="personal">Personal</option>
             </select>
           </div>
           <div><button class="submit">Submit</button></div>
